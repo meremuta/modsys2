@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles/state.css">
+</head>
+<body>
+    <div id="uIDcurrent"></div>
+    <header>
+        <button onclick="openPage('registrationForm')" class="tablink">Registration</button>
+        <button onclick="openPage('authForm')" class="tablink" id="firstTab">Authorization</button>
+        <button onclick="openPage('planTab')" class="tablink">Plan to watch</button> 
+        <button onclick="openPage('wachedTab')" class="tablink">Watched already</button> 
+        <button onclick="openPage('recommend')" class="tablink">Recommendation</button>
+        <button onclick="openPage('quote')" class="tablink">Random Quote</button>
+        <button onclick="openPage('searchTab')" class="tablink">Search</button>
+    </header>
+    <div id="authForm" class = "tabcontent">
+        <div>
+            <input type="text" id="uIDInput" placeholder="Secret Key">
+            <button onclick="getUID()" id="submitUID">Submit Secret Key</button>
+            <button onclick="openForgetUID()" id="remindUID">Remind Secret Key</button>
+        </div>
+
+        <div id = 'remindForm'>
+            <input type="text" id="loginRemind" placeholder="Login">
+            <input type="text" id="passwordRemind" placeholder="Password">
+            <button onclick="remind()" id="remind">Submit</button>
+        </div>
+    </div>
+    
+    <div id="quote" class = "tabcontent">
+        <button onclick="randomQuote()"> Click here to get random quote</button>
+    </div>
+
+    <div id = 'registrationForm' class = "tabcontent">
+        <input type="text" id="login" placeholder="Login">
+        <input type="text" id="password" placeholder="Password">
+        <button onclick="register()" id="register">Register</button>
+    </div>
+    
+    <div id = 'recommend' class = "tabcontent">
+        <button onclick="recomList()"> Click here to get recommendation</button>
+    </div>
+
+    <div id = "planTab" class = "tabcontent">
+        <button onclick="openAddWTab()">Add anime to wishlist</button>
+        <button onclick="getWishlist()">Open my wishlist</button>
+        <div id="addPlanTab">
+            <p>If you want to submit new title to your wishlist, write here the id from MyAnimeList.</p>
+            <p>ID of anime can be found in the link after ...anime/. For example here ID is 1735 - https://myanimelist.net/anime/1735</p>
+            <input type="text" id="animeIDaddWL" placeholder="Anime ID from MyAnimeList">
+            <button onclick="addToWishlist()">Add this anime to wishlist</button>
+        </div>
+    </div>
+
+    <div id = "wachedTab" class = "tabcontent">
+        <button onclick="openAddWachedTab()">Add anime to wached list</button>
+        <button onclick="getWachedlist()">Open my wached list</button>
+        <div id="addWachedTab">
+            <p>If you want to submit new title to your list of watched anime, write here the id from MyAnimeList and your rate from 1 to 10.</p>
+            <p>ID of anime can be found in the link after ...anime/. For example here ID is 1735 - https://myanimelist.net/anime/1735</p>
+            <div>
+                <input type="text" id="animeIDaddWachedL" placeholder="Anime ID from MyAnimeList">
+                <input  id="animeRateaddWachedL" placeholder="Rate" type="number" min="1" max="10">
+                <button onclick="addToWachedlist()">Add this anime to Wached</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="searchTab" class = "tabcontent">
+        <input type="text" id="search" placeholder="Search query">
+        <button onclick="searching()" id="searching">Search</button>
+    </div>
+
+    <div id="response"></div>
+
+</body>
+</html>
