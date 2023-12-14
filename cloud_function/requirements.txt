@@ -1,0 +1,4 @@
+ydb
+pandas
+bs4
+requests
