@@ -1,4 +1,4 @@
-#addPlanTab, #addWachedTab, #remindForm {
+#addPlanTab, #addWachedTab, #remindForm{
     display: none;
     flex-direction: column;
     align-items: center;
@@ -21,11 +21,12 @@ header{
     width: 550px;
 }
 
-#response{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+#response, #instructions{
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .tabcontent{

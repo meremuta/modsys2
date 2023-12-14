@@ -15,6 +15,7 @@
         <button onclick="openPage('quote')" class="tablink">Random Quote</button>
         <button onclick="openPage('searchTab')" class="tablink">Search</button>
     </header>
+    <div id = "instructions">Choose what you want to do now. If you are new here - register. If you have already registered - enter your secret key and start exploring other tabs.</div>
     <div id="authForm" class = "tabcontent">
         <div>
             <input type="text" id="uIDInput" placeholder="Secret Key">
@@ -70,6 +71,7 @@
     </div>
 
     <div id="searchTab" class = "tabcontent">
+        <p>Here you can search for anime and it's ID by keyword. The algorithm will basically perform search on MyAnimeList.net and return first several answers.</p>
         <input type="text" id="search" placeholder="Search query">
         <button onclick="searching()" id="searching">Search</button>
     </div>
